@@ -13,7 +13,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hbv\\KafkaCommunication\\KafkaCommunicationServiceProvider"
+                "Hbv\\KafkaCommunication\\KafkaServiceProvider"
             ]
         }
     },
