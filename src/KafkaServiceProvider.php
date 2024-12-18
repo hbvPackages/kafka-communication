@@ -1,5 +1,7 @@
 <?php
 
+namespace Hbv\KafkaCommunication;
+
 use Illuminate\Support\ServiceProvider;
 
 class KafkaServiceProvider extends ServiceProvider
