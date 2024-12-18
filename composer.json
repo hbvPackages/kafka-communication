@@ -15,5 +15,12 @@
             "name": "vahid habibzadeh"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hbv\\KafkaCommunication\\KafkaCommunicationServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }
