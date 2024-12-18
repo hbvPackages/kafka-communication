@@ -5,9 +5,9 @@ namespace Hbv\KafkaCommunication\Console;
 use Illuminate\Console\Command;
 use Hbv\KafkaCommunication\Services\Communicate;
 
-class KafkaConsumeCommand extends Command
+class ConsumeCommand extends Command
 {
-    protected $signature = 'kafkacommunication:consume {topic}';
+    protected $signature = 'KafkaCommunication:consume {topic}';
     protected $description = 'Consume messages from Kafka topic and send response to dynamic topic';
 
     public function handle()

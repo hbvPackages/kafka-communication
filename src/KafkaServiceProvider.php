@@ -2,7 +2,7 @@
 
 namespace Hbv\KafkaCommunication;
 
-use Hbv\KafkaCommunication\Console\KafkaConsumeCommand;
+use Hbv\KafkaCommunication\Console\ConsumeCommand;
 use Illuminate\Support\ServiceProvider;
 
 class KafkaServiceProvider extends ServiceProvider
@@ -12,7 +12,7 @@ class KafkaServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->commands(KafkaConsumeCommand::class);
+        $this->commands(ConsumeCommand::class);
     }
 
     /**
