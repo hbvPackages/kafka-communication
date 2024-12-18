@@ -10,6 +10,13 @@
             "Hbv\\KafkaCommunication\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hbv\\KafkaCommunication\\KafkaCommunicationServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "vahid habibzadeh"
