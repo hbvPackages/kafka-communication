@@ -9,7 +9,7 @@ class KafkaServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->commands('command.kafkacommunication.install');
+        //
     }
 
     /**
@@ -17,7 +17,9 @@ class KafkaServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->commands([
+            \Hbv\KafkaCommunication\Commands\KafkaConsumeCommand::class
+        ]);
     }
 
 }
