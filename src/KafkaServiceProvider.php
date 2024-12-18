@@ -9,7 +9,9 @@ class KafkaServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->commands([
+            \Hbv\KafkaCommunication\KafkaConsumeCommand::class,
+        ]);
     }
 
     /**
