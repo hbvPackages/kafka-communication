@@ -41,10 +41,8 @@ class Communicate
      * @param $topic
      * @return void
      */
-    public function listen($topic = null): void
+    public function listen($topic): void
     {
-        if (is_null($topic))
-            $topic = self::$topic;
         Kafka::consumer()
             ->subscribe($topic)
             ->withHandler(function (ConsumedMessage $message) use ($topic) {
