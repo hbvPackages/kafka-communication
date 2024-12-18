@@ -1,6 +1,6 @@
 <?php
 
-namespace Hbv\KafkaCommunication;
+namespace Hbv\KafkaCommunication\Commands;
 
 use Illuminate\Console\Command;
 use Hbv\KafkaCommunication\Services\Communicate;
