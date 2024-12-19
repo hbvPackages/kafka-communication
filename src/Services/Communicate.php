@@ -38,14 +38,12 @@ class Communicate
     }
 
     /**
-     * @param $topic
      * @return void
      */
-    public function listen($topic): void
+    public function listen(): void
     {
         Kafka::consumer()
-            ->subscribe($topic)
-            ->withHandler(function (ConsumedMessage $message) use ($topic) {
+            ->withHandler(function (ConsumedMessage $message) {
                 logger()->info("Communicating with {$message->getBody()}");
             });
     }

@@ -7,7 +7,7 @@ use Hbv\KafkaCommunication\Services\Communicate;
 
 class ConsumeCommand extends Command
 {
-    protected $signature = 'kcommunication:consume {topic}';
+    protected $signature = 'kafka-communication:consume {topic}';
     protected $description = 'Consume messages from Kafka topic and send response to dynamic topic';
 
     public function handle()
