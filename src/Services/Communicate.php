@@ -33,7 +33,8 @@ class Communicate
             body: $body
         );
 
-        $producer = Kafka::publish(self::$topic)
+        $producer = Kafka::publish('kafka:9092')
+            ->onTopic(self::$topic)
             ->withMessage($message);
         $producer->send();
     }
