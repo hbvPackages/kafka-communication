@@ -26,14 +26,14 @@ class Communicate
      * @return void
      * @throws \Exception
      */
-    public function publish($body): void
+    public function publish($topic, $body): void
     {
         $message = new Message(
             headers: ['x-api-key' => env('X_API_KEY'), 'x-secret-key' => env('X_SECRET_KEY')],
             body: $body
         );
 
-        $producer = Kafka::publish('topic')
+        $producer = Kafka::publish($topic)
             ->withMessage($message);
         $producer->send();
     }
