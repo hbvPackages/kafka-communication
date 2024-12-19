@@ -2,6 +2,7 @@
 
 namespace Hbv\KafkaCommunication\Services;
 
+use Illuminate\Support\Facades\Log;
 use Junges\Kafka\Message\ConsumedMessage;
 use Junges\Kafka\Message\Message;
 use Junges\Kafka\Facades\Kafka;
@@ -42,9 +43,6 @@ class Communicate
      */
     public function listen(): void
     {
-        Kafka::consumer()
-            ->withHandler(function (ConsumedMessage $message) {
-                logger()->info("Communicating with {$message->getBody()}");
-            });
+        die('here');
     }
 }
